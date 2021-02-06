@@ -28,7 +28,6 @@ MEDIA_FILE = ['The inability to resist temptation makes you a slave to those tem
               'Growth is an endlessly iterative process. Keep improving',
               'Love the hand that fate deals you and play it as your own, for what could be more fitting?',
               'The greater the difficulty of a task, the more the glory in surmounting it',
-              'We are able to develop our rapid decision making with training & experience - our unconscious and conscious thinking are no different',
               'Get comfortable with frequent small failures on the way to learning',
               'Set an ambitious hourly wage rate for yourself that determines how you value your time. If your rate does not feel absurdly high, it is not high enough. Is what you’re currently doing right now worth your time?',
               'Do not cry about the unfairness of life ... exploit it. Life is a video game, and all games can be hacked',
@@ -87,7 +86,7 @@ def reply_to_tweets():
             RANDOM_MEDIA_FILE2 = (random.choice(RANDOM_MEDIA_FILE))
             print('found #ineedmotivation')
             print('responding back...')
-            api.update_status(RANDOM_MEDIA_FILE2 + ' @' + mention.user.screen_name) 
+            api.update_status(RANDOM_MEDIA_FILE2 + ' @' + mention.user.screen_name, mention.id) 
             #Add ',mention.id' to get bot to reply under tweet, ' @' + mention.user.screen_name
 
 
