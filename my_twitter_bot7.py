@@ -56,6 +56,7 @@ def RANDOM_MEDIA_LIST(x):
 def retrieve_last_seen_id(file_name):
     f_read = open(file_name, 'r')
     last_seen_id = int(f_read.read().strip())
+    f_read.close()     #new line
     return last_seen_id
 
 # retrieves& id of tweet mention so bot does not reply to same user infinite times
@@ -86,9 +87,9 @@ def reply_to_tweets():
             RANDOM_MEDIA_FILE2 = (random.choice(RANDOM_MEDIA_FILE))
             print('found #ineedmotivation')
             print('responding back...')
-            api.update_status('@' + mention.user.screen_name + ' ' + RANDOM_MEDIA_FILE2 , mention.id) 
+            api.update_status(RANDOM_MEDIA_FILE2 + ' @' + mention.user.screen_name , mention.id) 
             #Add ',mention.id' to get bot to reply under tweet, ' @' + mention.user.screen_name
-
+            #api.update_status('@' + mention.user.screen_name + ' ' + RANDOM_MEDIA_FILE2 , mention.id)
 
 while True:
     reply_to_tweets()
