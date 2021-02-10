@@ -87,13 +87,13 @@ def reply_to_tweets():
             RANDOM_MEDIA_FILE2 = (random.choice(RANDOM_MEDIA_FILE))
             print('found #ineedmotivation')
             print('responding back...')
-            api.update_status(RANDOM_MEDIA_FILE2 + ' @' + mention.user.screen_name) 
+            api.update_status(RANDOM_MEDIA_FILE2 + ' @' + mention.user.screen_name, mention.id) 
             #Add ',mention.id' to get bot to reply under tweet, ' @' + mention.user.screen_name
             #api.update_status('@' + mention.user.screen_name + ' ' + RANDOM_MEDIA_FILE2 , mention.id)
 
 while True:
     reply_to_tweets()
-    time.sleep(10)
+    time.sleep(15)
 
 
 
