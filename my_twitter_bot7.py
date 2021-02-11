@@ -69,7 +69,7 @@ def store_last_seen_id(last_seen_id, file_name):
 # stores id of tweet mention so bot does not reply to same user infinite times
 
 def reply_to_tweets():
-    print('retrieving &replying to tweets...')
+    print('retrieving &replying to tweets...', flush = true)
 
     last_seen_id = retrieve_last_seen_id(FILE_NAME)
     mentions = api.mentions_timeline(
@@ -79,14 +79,14 @@ def reply_to_tweets():
     # use 1345535556198035458 for testing 
 
     for mention in reversed(mentions):   #allows us to go through oldest tweet mentions first
-        print(str(mention.id)+ '-' + mention.full_text)
+        print(str(mention.id)+ '-' + mention.full_text, flush = true)
         last_seen_id = mention.id
         store_last_seen_id(last_seen_id, FILE_NAME)
         if '#ineedmotivation' in mention.full_text.lower():
             RANDOM_MEDIA_FILE = RANDOM_MEDIA_LIST(MEDIA_FILE)
             RANDOM_MEDIA_FILE2 = (random.choice(RANDOM_MEDIA_FILE))
-            print('found #ineedmotivation')
-            print('responding back...')
+            print('found #ineedmotivation', flush = true)
+            print('responding back...', flush = true)
             api.update_status(RANDOM_MEDIA_FILE2 + ' @' + mention.user.screen_name, mention.id) 
             #Add ',mention.id' to get bot to reply under tweet, ' @' + mention.user.screen_name
             #api.update_status('@' + mention.user.screen_name + ' ' + RANDOM_MEDIA_FILE2 , mention.id)
