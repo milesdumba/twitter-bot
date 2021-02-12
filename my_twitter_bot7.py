@@ -39,8 +39,8 @@ MEDIA_FILE = ['The inability to resist temptation makes you a slave to those tem
               'Only he who attempts the absurd is capable of achieving the impossible',
               'Character cannot be developed in ease and quiet. Only through experience of trial and suffering can the soul be strengthened, ambition inspired, and success achieved',
               'Output will tend to be greater when everyone strives for a level of achievement beyond immediate grasp… Such goal-setting is extremely important if what you want is peak performance',
-              'Growth: 100 uncomfortable hours > 1,000 comfortable hour'
-              'Surpass Your Limits.Right here. Right now!'
+              'Growth: 100 uncomfortable hours > 1,000 comfortable hour',
+              'Surpass Your Limits.Right here. Right now!',
               "Even if you think you might fail, you'll be fine aslong as you don't give up! Surpass your limits. Then a path will open up for you!",
               'Being weak is nothing to be ashamed of...Staying weak is!'
               ]
@@ -56,7 +56,7 @@ def RANDOM_MEDIA_LIST(x):
 def retrieve_last_seen_id(file_name):
     f_read = open(file_name, 'r')
     last_seen_id = int(f_read.read().strip())
-    f_read.close()     #new line
+    f_read.close()     
     return last_seen_id
 
 # retrieves& id of tweet mention so bot does not reply to same user infinite times
@@ -69,7 +69,7 @@ def store_last_seen_id(last_seen_id, file_name):
 # stores id of tweet mention so bot does not reply to same user infinite times
 
 def reply_to_tweets():
-    print('retrieving &replying to tweets...', flush = true)
+    print('retrieving &replying to tweets...')
 
     last_seen_id = retrieve_last_seen_id(FILE_NAME)
     mentions = api.mentions_timeline(
@@ -79,21 +79,21 @@ def reply_to_tweets():
     # use 1345535556198035458 for testing 
 
     for mention in reversed(mentions):   #allows us to go through oldest tweet mentions first
-        print(str(mention.id)+ '-' + mention.full_text, flush = true)
+        print(str(mention.id)+ '-' + mention.full_text)
         last_seen_id = mention.id
         store_last_seen_id(last_seen_id, FILE_NAME)
         if '#ineedmotivation' in mention.full_text.lower():
             RANDOM_MEDIA_FILE = RANDOM_MEDIA_LIST(MEDIA_FILE)
             RANDOM_MEDIA_FILE2 = (random.choice(RANDOM_MEDIA_FILE))
-            print('found #ineedmotivation', flush = true)
-            print('responding back...', flush = true)
+            print('found #ineedmotivation')
+            print('responding back...')
             api.update_status(RANDOM_MEDIA_FILE2 + ' @' + mention.user.screen_name, mention.id) 
             #Add ',mention.id' to get bot to reply under tweet, ' @' + mention.user.screen_name
             #api.update_status('@' + mention.user.screen_name + ' ' + RANDOM_MEDIA_FILE2 , mention.id)
 
 while True:
     reply_to_tweets()
-    time.sleep(15)
+    time.sleep(10)
 
 
 
