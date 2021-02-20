@@ -42,8 +42,8 @@ MEDIA_FILE = ['The inability to resist temptation makes you a slave to those tem
               'Growth: 100 uncomfortable hours > 1,000 comfortable hour',
               'Surpass Your Limits.Right here. Right now!',
               "Even if you think you might fail, you'll be fine aslong as you don't give up! Surpass your limits. Then a path will open up for you!",
-              'Being weak is nothing to be ashamed of...Staying weak is!'
-              ]
+              'Being weak is nothing to be ashamed of...Staying weak is!',
+              'Real generosity towards the future lies in giving all to the present']
 
 
 def RANDOM_MEDIA_LIST(x):
