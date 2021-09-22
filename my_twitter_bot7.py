@@ -80,7 +80,7 @@ def reply_to_tweets():
         print(str(mention.id)+ '-' + mention.full_text)
         last_seen_id = mention.id
         store_last_seen_id(last_seen_id, FILE_NAME)
-        if '#Yo' in mention.full_text.lower():
+        if ' #Yo' in mention.full_text.lower():
             RANDOM_MEDIA_FILE = RANDOM_MEDIA_LIST(MEDIA_FILE)
             RANDOM_MEDIA_FILE2 = (random.choice(RANDOM_MEDIA_FILE))
             print('found #Yo')
