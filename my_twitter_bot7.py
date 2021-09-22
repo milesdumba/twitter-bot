@@ -18,32 +18,30 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth, wait_on_rate_limit = True)
 
 FILE_NAME = 'last_seen_id.txt'
-MEDIA_FILE = ['The inability to resist temptation makes you a slave to those temptations, whilst the capacity to prioritise what must be done over what you desire to do frees you to reach your potential',
-              'The stronger you get, both physically and mentally, the easier everything seems. The things people call unrealistic suddenly only seem difficult to you',
-              'Suffering cannot be avoided, merely postponed. Get it over and done with',
-              'You will doubt yourself a million times. It is only natural',
-              'Bitter are the roots of study, but how sweet their fruits',
-              'Iron rusts from disuse, stagnant water loses its purity, and in cold weather becomes frozen; even so does inaction sap the vigors of the mind',
+MEDIA_FILE = [
               'It takes being average for a while to become great',
               'Growth is an endlessly iterative process. Keep improving',
               'Love the hand that fate deals you and play it as your own, for what could be more fitting?',
               'The greater the difficulty of a task, the more the glory in surmounting it',
               'Get comfortable with frequent small failures on the way to learning',
-              'Set an ambitious hourly wage rate for yourself that determines how you value your time. If your rate does not feel absurdly high, it is not high enough. Is what you’re currently doing right now worth your time?',
               'Do not cry about the unfairness of life ... exploit it. Life is a video game, and all games can be hacked',
-              "Isn’t life funny? You cannot succeed without failing at least once, but you can fail multiple times and never succeed. The more you fail and learn, the greater the probability of succeeding",
-              'Everything is either an opportunity to grow or an obstacle to keep you from growing. You get to choose',
               'You cannot afford to live on potential for the rest of your life; at some point, you have to unleash the potential and make your move',
-              'Hardships often prepares ordinary people for an extraordinary destiny',
               "It is not about perfection. It’s about effort. And when you bring that effort every single day, that’s where transformation happens. That is how change occurs",
               'Only he who attempts the absurd is capable of achieving the impossible',
               'Character cannot be developed in ease and quiet. Only through experience of trial and suffering can the soul be strengthened, ambition inspired, and success achieved',
               'Output will tend to be greater when everyone strives for a level of achievement beyond immediate grasp… Such goal-setting is extremely important if what you want is peak performance',
-              'Growth: 100 uncomfortable hours > 1,000 comfortable hour',
-              'Surpass Your Limits.Right here. Right now!',
-              "Even if you think you might fail, you'll be fine aslong as you don't give up! Surpass your limits. Then a path will open up for you!",
-              'Being weak is nothing to be ashamed of...Staying weak is!',
-              'Real generosity towards the future lies in giving all to the present']
+              'Captain Yami said Surpass Your Limits',
+              'Real generosity towards the future lies in giving all to the present',
+              'The more immediate pleasure you get from an action, the more strongly you should question whether it aligns with your long-term goals',
+              'When nothing seems to help, I go & look at a stonecutter hammering away at his rock -a hundred times without a crack showing in it. Yet at the hundred & first blow it will split in two, & I know it was not that last blow that did it—but all that had gone before',
+              'When preparation becomes a form of procrastination, you need to change something. You don’t want to merely be planning. You want to be practising',
+              'Start with repetition, not perfection. This is the first takeaway of the 3rd Law: you just need to get your reps in',
+              'Missing one session is an accident. Missing two is the start of a new habit.',
+              'Sluggish days and bad workouts maintain the compound gains you accrued from previous good days. Simply doing something— anything really —is huge. Don’t put up a zero. Don’t let losses eat into your compounding',
+              'When you can’t win by being better, you can win by being different. A good player works hard to win the game everyone else is playing. A great player creates a new game that favours their strengths and avoids their weaknesses',
+              'At some point it comes down to who can handle the boredom of training every day, doing the same lifts over and over and over.',
+              '“Men desire novelty to such an extent that those who are doing well wish for a change as much as those who are doing badly.”'
+ ]
 
 
 def RANDOM_MEDIA_LIST(x):
