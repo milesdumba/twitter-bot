@@ -20,6 +20,7 @@ api = tweepy.API(auth, wait_on_rate_limit = True)
 FILE_NAME = 'last_seen_id.txt'
 MEDIA_FILE = [
               'It takes being average for a while to become great',
+              "Run from what's comfortable. Forget safety. Live where you fear to live. Destroy your reputation. Be notorious. I have tried prudent planning for long enough. From now on I'll be mad",
               'Growth is an endlessly iterative process. Keep improving',
               'Love the hand that fate deals you and play it as your own, for what could be more fitting?',
               'The greater the difficulty of a task, the more the glory in surmounting it',
@@ -40,7 +41,7 @@ MEDIA_FILE = [
               'Sluggish days and bad workouts maintain the compound gains you accrued from previous good days. Simply doing something— anything really —is huge. Don’t put up a zero. Don’t let losses eat into your compounding',
               'When you can’t win by being better, you can win by being different. A good player works hard to win the game everyone else is playing. A great player creates a new game that favours their strengths and avoids their weaknesses',
               'At some point it comes down to who can handle the boredom of training every day, doing the same lifts over and over and over.',
-              '“Men desire novelty to such an extent that those who are doing well wish for a change as much as those who are doing badly.”'
+              'Men desire novelty to such an extent that those who are doing well wish for a change as much as those who are doing badly.'
  ]
 
 
